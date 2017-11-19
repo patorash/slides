@@ -1,9 +1,9 @@
 require 'slide'
 require 'page_base'
-require 'slides/sample/pages'
+require 'slides/howto-knockout-components/pages'
 require 'opal/websocket'
 
-Gibier.slide_name = 'sample'
+Gibier.slide_name = 'howto-knockout-components'
 Gibier.gh_pages = `window.ghPages`
 Gibier.assets_path = `window.assetsPath`
 
@@ -14,7 +14,7 @@ module App
 end
 
 $document.ready do
-  ws = Opal::WebSocket.new("ws://#{`window.location.host`}/push_notification/start/slide/sample") unless Gibier.gh_pages
+  ws = Opal::WebSocket.new("ws://#{`window.location.host`}/push_notification/start/slide/howto-knockout-components") unless Gibier.gh_pages
 
   $window.on(:resize) do
     App.render(ws)
