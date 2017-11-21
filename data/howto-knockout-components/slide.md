@@ -51,7 +51,7 @@ ko.components.register 'app', {
 
 * 独自タグ（カスタムエレメント）になる
 
-```
+```html
 <body>
   <app></app>
 </body>
@@ -74,7 +74,7 @@ templateに、template要素のidを指定する。
 
 ```coffee
 class AppViewModel
-  constructor: (@title = null) ->　
+  constructor: (@title = null) ->
     ko.track(this)
 
 ko.components.register 'app', {
@@ -111,7 +111,7 @@ templateタグにid="app"をつける。
 
 layout
 
-```html
+```erb
 <body>
   <%= yield %>
 </body>
@@ -119,7 +119,7 @@ layout
 
 view(erb, slim, haml)
 
-```html
+```erb
 <app></app>
 <%= render 'shared/ko-templates/app' %>
 ```
@@ -277,7 +277,7 @@ ko.components.register 'app', {
 
 View
 
-```html
+```erb
 <% regions = Region.eager_load(:prefs).to_json(only: [:name],
                                                include: {prefs: {only: [:name]}} %>
 <search-by-prefs params="regions: #{regions},
@@ -298,7 +298,7 @@ ko.components.register 'search-by-prefs', {
 
 View(template)
 
-```html
+```erb
 <template id="search-by-prefs">
   <%= form_with url: addresses_path, local: true do %>
     <dl data-bind="foreach: { data: regions, as: 'region' }">

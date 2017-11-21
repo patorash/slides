@@ -20,20 +20,10 @@ GIT
   specs:
     opal-websocket (0.1.0)
 
-GEM
-  remote: https://rubygems.org/
+GIT
+  remote: https://github.com/youchan/gibier.git
+  revision: 8f69a3f21766471d0054de194216fd5b528b7ba0
   specs:
-    addressable (2.5.2)
-      public_suffix (>= 2.0.2, < 4.0)
-    backports (3.10.3)
-    concurrent-ruby (1.0.5)
-    daemons (1.2.5)
-    em-websocket (0.3.8)
-      addressable (>= 2.1.1)
-      eventmachine (>= 0.12.9)
-    eventmachine (1.2.5)
-    ffi (1.9.18)
-    fssm (0.2.10)
     gibier (0.8.10)
       eventmachine
       fssm
@@ -49,6 +39,21 @@ GEM
       thin
       thor
       unindent
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    backports (3.10.3)
+    concurrent-ruby (1.0.5)
+    daemons (1.2.5)
+    em-websocket (0.3.8)
+      addressable (>= 2.1.1)
+      eventmachine (>= 0.12.9)
+    eventmachine (1.2.5)
+    ffi (1.9.18)
+    fssm (0.2.10)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -69,7 +74,7 @@ GEM
     rack (1.6.8)
     rack-protection (1.5.3)
       rack
-    rack-test (0.7.0)
+    rack-test (0.8.0)
       rack (>= 1.0, < 3)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
@@ -113,7 +118,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  gibier
+  gibier!
   hyalite
   opal-haml!
   opal-router!

@@ -93,16 +93,16 @@ def content
 7
 8
 9
-10</pre></td><td class="code"><pre>class AppViewModel
-  constructor: (@title = null) -&gt;
-    ko.track(this)
+10</pre></td><td class="code"><pre><span class="k">class</span> <span class="nx">AppViewModel</span>
+  <span class="na">constructor</span><span class="o">:</span> <span class="p">(</span><span class="vi">@</span><span class="na">title</span> <span class="o">=</span> <span class="no">null</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="nx">ko</span><span class="p">.</span><span class="na">track</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
 
-ko.components.register 'app', {
-  viewModel: -&gt; new AppViewModel()
-  template: """
+<span class="nx">ko</span><span class="p">.</span><span class="na">components</span><span class="p">.</span><span class="na">register</span> <span class="s">'app'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">viewModel</span><span class="o">:</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="nx">AppViewModel</span><span class="p">()</span>
+  <span class="na">template</span><span class="o">:</span> <span class="s">"""
     &lt;h1 data-bind="text: title"&gt;&lt;/h1&gt;
-  """
-}
+  """</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -122,9 +122,9 @@ def content
       )
       children << code({ dangerouslySetInnerHTML: { __html: %q{<div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
-3</pre></td><td class="code"><pre>&lt;body&gt;
-  &lt;app&gt;&lt;/app&gt;
-&lt;/body&gt;
+3</pre></td><td class="code"><pre><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;app&gt;&lt;/app&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -167,14 +167,14 @@ def content
 5
 6
 7
-8</pre></td><td class="code"><pre>class AppViewModel
-  constructor: (@title = null) -&gt;　
-    ko.track(this)
+8</pre></td><td class="code"><pre><span class="k">class</span> <span class="nx">AppViewModel</span>
+  <span class="na">constructor</span><span class="o">:</span> <span class="p">(</span><span class="vi">@</span><span class="na">title</span> <span class="o">=</span> <span class="no">null</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="nx">ko</span><span class="p">.</span><span class="na">track</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
 
-ko.components.register 'app', {
-  viewModel: -&gt; new AppViewModel()
-  template: { element: 'app' }
-}
+<span class="nx">ko</span><span class="p">.</span><span class="na">components</span><span class="p">.</span><span class="na">register</span> <span class="s">'app'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">viewModel</span><span class="o">:</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="nx">AppViewModel</span><span class="p">()</span>
+  <span class="na">template</span><span class="o">:</span> <span class="p">{</span> <span class="na">element</span><span class="o">:</span> <span class="s">'app'</span> <span class="p">}</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -193,9 +193,9 @@ def content
 こちらはRailsのViewに定義できるのでヘルパーも使える。")
       children << code({ dangerouslySetInnerHTML: { __html: %q{<div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
-3</pre></td><td class="code"><pre>&lt;template id="app"&gt;
-  &lt;h1 data-bind="text: title"&gt;&lt;/h1&gt;
-&lt;/template&gt;
+3</pre></td><td class="code"><pre><span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">data-bind=</span><span class="s">"text: title"</span><span class="nt">&gt;&lt;/h1&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -216,12 +216,12 @@ def content
 3
 4
 5
-6</pre></td><td class="code"><pre>&lt;body&gt;
-  &lt;app&gt;&lt;/app&gt;
-  &lt;template id="app"&gt;
-    &lt;h1 data-bind="text: title"&gt;&lt;/h1&gt;
-  &lt;/template&gt;
-&lt;/body&gt;
+6</pre></td><td class="code"><pre><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;app&gt;&lt;/app&gt;</span>
+  <span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">data-bind=</span><span class="s">"text: title"</span><span class="nt">&gt;&lt;/h1&gt;</span>
+  <span class="nt">&lt;/template&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -239,16 +239,16 @@ def content
       children << p(nil, "layout")
       children << code({ dangerouslySetInnerHTML: { __html: %q{<div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
-3</pre></td><td class="code"><pre>&lt;body&gt;
-  &lt;%= yield %&gt;
-&lt;/body&gt;
+3</pre></td><td class="code"><pre><span class="nt">&lt;body&gt;</span>
+  <span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
       children << p(nil, "view(erb, slim, haml)")
       children << code({ dangerouslySetInnerHTML: { __html: %q{<div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre>&lt;app&gt;&lt;/app&gt;
-&lt;%= render 'shared/ko-templates/app' %&gt;
+2</pre></td><td class="code"><pre><span class="nt">&lt;app&gt;&lt;/app&gt;</span>
+<span class="cp">&lt;%=</span> <span class="n">render</span> <span class="s1">'shared/ko-templates/app'</span> <span class="cp">%&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -286,10 +286,10 @@ def content
       children << code({ dangerouslySetInnerHTML: { __html: %q{<div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
-4</pre></td><td class="code"><pre>&lt;div class="modal" data-bind="visible: visible"&gt;
-  &lt;p data-bind="text: message"&gt;&lt;/p&gt;
-  &lt;button type="button" data-bind="click: close"&gt;閉じる&lt;/button&gt;
-&lt;/div&gt;
+4</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span> <span class="na">data-bind=</span><span class="s">"visible: visible"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">data-bind=</span><span class="s">"text: message"</span><span class="nt">&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bind=</span><span class="s">"click: close"</span><span class="nt">&gt;</span>閉じる<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -298,11 +298,11 @@ def content
 2
 3
 4
-5</pre></td><td class="code"><pre>&lt;div class="modal" data-bind="visible: visible"&gt;
-  &lt;h1 data-bind="text: title"&gt;&lt;/h1&gt;
-  &lt;p data-bind="text: message"&gt;&lt;/p&gt;
-  &lt;button type="button" data-bind="click: hide"&gt;閉じる&lt;/button&gt;
-&lt;/div&gt;
+5</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span> <span class="na">data-bind=</span><span class="s">"visible: visible"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">data-bind=</span><span class="s">"text: title"</span><span class="nt">&gt;&lt;/h1&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">data-bind=</span><span class="s">"text: message"</span><span class="nt">&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bind=</span><span class="s">"click: hide"</span><span class="nt">&gt;</span>閉じる<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -335,13 +335,13 @@ def content
 4
 5
 6
-7</pre></td><td class="code"><pre>&lt;template id="base-modal"&gt;
-  &lt;div class="modal" data-bind="visible: visible"&gt;
-    &lt;!-- ko template: { nodes: $componentTemplateNodes } --&gt;
-    &lt;!-- /ko --&gt;
-    &lt;button type="button" data-bind="click: hide"&gt;閉じる&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+7</pre></td><td class="code"><pre><span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">"base-modal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span> <span class="na">data-bind=</span><span class="s">"visible: visible"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- ko template: { nodes: $componentTemplateNodes } --&gt;</span>
+    <span class="c">&lt;!-- /ko --&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bind=</span><span class="s">"click: hide"</span><span class="nt">&gt;</span>閉じる<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -362,12 +362,12 @@ def content
 3
 4
 5
-6</pre></td><td class="code"><pre>class @BaseModal
-  constructor: -&gt;
-    @vislble = false
-    ko.track(this)
-  show: -&gt; @vislble = true
-  hide: -&gt; @visible = false
+6</pre></td><td class="code"><pre><span class="k">class</span> <span class="vi">@</span><span class="na">BaseModal</span>
+  <span class="na">constructor</span><span class="o">:</span> <span class="o">-&gt;</span>
+    <span class="vi">@</span><span class="na">vislble</span> <span class="o">=</span> <span class="no">false</span>
+    <span class="nx">ko</span><span class="p">.</span><span class="na">track</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+  <span class="na">show</span><span class="o">:</span> <span class="o">-&gt;</span> <span class="vi">@</span><span class="na">vislble</span> <span class="o">=</span> <span class="no">true</span>
+  <span class="na">hide</span><span class="o">:</span> <span class="o">-&gt;</span> <span class="vi">@</span><span class="na">visible</span> <span class="o">=</span> <span class="no">false</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -398,23 +398,23 @@ def content
 14
 15
 16
-17</pre></td><td class="code"><pre>class SimpleAlertModal extends BaseModal
-  constructor: (@message = null) -&gt;
-    super()
+17</pre></td><td class="code"><pre><span class="k">class</span> <span class="nx">SimpleAlertModal</span> <span class="k">extends</span> <span class="nx">BaseModal</span>
+  <span class="na">constructor</span><span class="o">:</span> <span class="p">(</span><span class="vi">@</span><span class="na">message</span> <span class="o">=</span> <span class="no">null</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="k">super</span><span class="p">()</span>
 
-ko.components.register 'simple-alert-modal', {
-  viewModel: -&gt; new SimpleAlertModal()
-  template: { element: 'base-modal' }
-}
+<span class="nx">ko</span><span class="p">.</span><span class="na">components</span><span class="p">.</span><span class="na">register</span> <span class="s">'simple-alert-modal'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">viewModel</span><span class="o">:</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="nx">SimpleAlertModal</span><span class="p">()</span>
+  <span class="na">template</span><span class="o">:</span> <span class="p">{</span> <span class="na">element</span><span class="o">:</span> <span class="s">'base-modal'</span> <span class="p">}</span>
+<span class="p">}</span>
 
-class DetailAlertModal extends BaseModal
-  constructor: (@title = null, @message = null) -&gt;
-    super()
+<span class="k">class</span> <span class="nx">DetailAlertModal</span> <span class="k">extends</span> <span class="nx">BaseModal</span>
+  <span class="na">constructor</span><span class="o">:</span> <span class="p">(</span><span class="vi">@</span><span class="na">title</span> <span class="o">=</span> <span class="no">null</span><span class="p">,</span> <span class="vi">@</span><span class="na">message</span> <span class="o">=</span> <span class="no">null</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="k">super</span><span class="p">()</span>
 
-ko.components.register 'detail-alert-modal', {
-  viewModel: -&gt; new DetailAlertModal()
-  template: { element: 'base-modal' }
-}
+<span class="nx">ko</span><span class="p">.</span><span class="na">components</span><span class="p">.</span><span class="na">register</span> <span class="s">'detail-alert-modal'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">viewModel</span><span class="o">:</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="nx">DetailAlertModal</span><span class="p">()</span>
+  <span class="na">template</span><span class="o">:</span> <span class="p">{</span> <span class="na">element</span><span class="o">:</span> <span class="s">'base-modal'</span> <span class="p">}</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -436,14 +436,14 @@ def content
 5
 6
 7
-8</pre></td><td class="code"><pre>&lt;simple-alert-modal&gt;
-  &lt;p data-bind="text: message"&gt;&lt;/p&gt;
-&lt;/simple-alert-modal&gt;
+8</pre></td><td class="code"><pre><span class="nt">&lt;simple-alert-modal&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">data-bind=</span><span class="s">"text: message"</span><span class="nt">&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/simple-alert-modal&gt;</span>
 
-&lt;detail-alert-modal&gt;
-  &lt;h1 data-bind="text: title"&gt;&lt;/h1&gt;
-  &lt;p data-bind="text: message"&gt;&lt;/p&gt;
-&lt;/detail-alert-modal&gt;
+<span class="nt">&lt;detail-alert-modal&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">data-bind=</span><span class="s">"text: title"</span><span class="nt">&gt;&lt;/h1&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">data-bind=</span><span class="s">"text: message"</span><span class="nt">&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/detail-alert-modal&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -470,16 +470,16 @@ gon経由は、gonの存在チェックが面倒😫
 7
 8
 9
-10</pre></td><td class="code"><pre>class AppViewModel
-  constructor: (@title = null) -&gt;
-    ko.track(this)
+10</pre></td><td class="code"><pre><span class="k">class</span> <span class="nx">AppViewModel</span>
+  <span class="na">constructor</span><span class="o">:</span> <span class="p">(</span><span class="vi">@</span><span class="na">title</span> <span class="o">=</span> <span class="no">null</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="nx">ko</span><span class="p">.</span><span class="na">track</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
 
-$ -&gt;
-  app_view = if gon?
-    new AppViewModel(gon.title)
-  else
-    new AppViewModel()
-  ko.appryBindings(app_view)
+<span class="nx">$</span> <span class="o">-&gt;</span>
+  <span class="nx">app_view</span> <span class="o">=</span> <span class="k">if</span> <span class="nx">gon</span><span class="o">?</span>
+    <span class="k">new</span> <span class="nx">AppViewModel</span><span class="p">(</span><span class="nx">gon</span><span class="p">.</span><span class="na">title</span><span class="p">)</span>
+  <span class="k">else</span>
+    <span class="k">new</span> <span class="nx">AppViewModel</span><span class="p">()</span>
+  <span class="nx">ko</span><span class="p">.</span><span class="na">appryBindings</span><span class="p">(</span><span class="nx">app_view</span><span class="p">)</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -500,11 +500,11 @@ def content
 2
 3
 4
-5</pre></td><td class="code"><pre>$ -&gt;
-  # div.target data-title="タイトル" からデータ取得
-  title = $('.target').data('title')
-  app_view = new AppViewModel(title)
-  ko.appryBindings(app_view)
+5</pre></td><td class="code"><pre><span class="nx">$</span> <span class="o">-&gt;</span>
+  <span class="c1"># div.target data-title="タイトル" からデータ取得</span>
+  <span class="nx">title</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s">'.target'</span><span class="p">).</span><span class="na">data</span><span class="p">(</span><span class="s">'title'</span><span class="p">)</span>
+  <span class="nx">app_view</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AppViewModel</span><span class="p">(</span><span class="nx">title</span><span class="p">)</span>
+  <span class="nx">ko</span><span class="p">.</span><span class="na">appryBindings</span><span class="p">(</span><span class="nx">app_view</span><span class="p">)</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -523,8 +523,8 @@ def content
 引数の変数スコープもコンポーネント定義箇所に絞られる👍")
       children << p(nil, "View")
       children << code({ dangerouslySetInnerHTML: { __html: %q{<div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre>&lt;app params="title: 'タイトル'"&gt;
-&lt;/app&gt;
+2</pre></td><td class="code"><pre><span class="nt">&lt;app</span> <span class="na">params=</span><span class="s">"title: 'タイトル'"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/app&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -532,10 +532,10 @@ def content
       children << code({ dangerouslySetInnerHTML: { __html: %q{<div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
-4</pre></td><td class="code"><pre>ko.components.register 'app', {
-  viewModel: (params) -&gt; new AppViewModel(params.title)
-  template: { element: 'app' }
-}
+4</pre></td><td class="code"><pre><span class="nx">ko</span><span class="p">.</span><span class="na">components</span><span class="p">.</span><span class="na">register</span> <span class="s">'app'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">viewModel</span><span class="o">:</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="nx">AppViewModel</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="na">title</span><span class="p">)</span>
+  <span class="na">template</span><span class="o">:</span> <span class="p">{</span> <span class="na">element</span><span class="o">:</span> <span class="s">'app'</span> <span class="p">}</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -555,11 +555,11 @@ def content
 2
 3
 4
-5</pre></td><td class="code"><pre>&lt;% regions = Region.eager_load(:prefs).to_json(only: [:name],
-                                               include: {prefs: {only: [:name]}} %&gt;
-&lt;search-by-prefs params="regions: #{regions},
-                         selected_prefs: #{params[:prefs]&amp;.to_json || []}"&gt;
-&lt;/search-by-prefs&gt;
+5</pre></td><td class="code"><pre><span class="cp">&lt;%</span> <span class="n">regions</span> <span class="o">=</span> <span class="no">Region</span><span class="p">.</span><span class="nf">eager_load</span><span class="p">(</span><span class="ss">:prefs</span><span class="p">).</span><span class="nf">to_json</span><span class="p">(</span><span class="ss">only: </span><span class="p">[</span><span class="ss">:name</span><span class="p">],</span>
+                                               <span class="ss">include: </span><span class="p">{</span><span class="ss">prefs: </span><span class="p">{</span><span class="ss">only: </span><span class="p">[</span><span class="ss">:name</span><span class="p">]}}</span> <span class="cp">%&gt;</span>
+<span class="nt">&lt;search-by-prefs</span> <span class="na">params=</span><span class="s">"regions: #{regions},
+                         selected_prefs: #{params[:prefs]&amp;.to_json || []}"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/search-by-prefs&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -567,10 +567,10 @@ def content
       children << code({ dangerouslySetInnerHTML: { __html: %q{<div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
-4</pre></td><td class="code"><pre>ko.components.register 'search-by-prefs', {
-  viewModel: (params) -&gt; new SearchPrefs(params.regions, params.selected_prefs)
-  template: { element: 'search-by-prefs' }
-}
+4</pre></td><td class="code"><pre><span class="nx">ko</span><span class="p">.</span><span class="na">components</span><span class="p">.</span><span class="na">register</span> <span class="s">'search-by-prefs'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">viewModel</span><span class="o">:</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="nx">SearchPrefs</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="na">regions</span><span class="p">,</span> <span class="nx">params</span><span class="p">.</span><span class="na">selected_prefs</span><span class="p">)</span>
+  <span class="na">template</span><span class="o">:</span> <span class="p">{</span> <span class="na">element</span><span class="o">:</span> <span class="s">'search-by-prefs'</span> <span class="p">}</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -602,27 +602,27 @@ def content
 18
 19
 20
-21</pre></td><td class="code"><pre>&lt;template id="search-by-prefs"&gt;
-  &lt;%= form_with url: addresses_path, local: true do %&gt;
-    &lt;dl data-bind="foreach: { data: regions, as: 'region' }"&gt;
-      &lt;dt&gt;
-        &lt;input type="checkbox" data-bind="value: region.name,
+21</pre></td><td class="code"><pre><span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">"search-by-prefs"</span><span class="nt">&gt;</span>
+  <span class="cp">&lt;%=</span> <span class="n">form_with</span> <span class="ss">url: </span><span class="n">addresses_path</span><span class="p">,</span> <span class="ss">local: </span><span class="kp">true</span> <span class="k">do</span> <span class="cp">%&gt;</span>
+    <span class="nt">&lt;dl</span> <span class="na">data-bind=</span><span class="s">"foreach: { data: regions, as: 'region' }"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;dt&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">data-bind=</span><span class="s">"value: region.name,
           checked: $parent.selected_regions,
-          click: $parent.toggleRegion"&gt;
-        &lt;span data-bind="text: region.name"&gt;&lt;/span&gt;
-      &lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;ul class="inline" data-bind="foreach: { data: region.prefs, as: 'pref' }"&gt;
-          &lt;li&gt;
-            &lt;input type="checkbox" name="prefs[]" data-bind="value: pref.name,
-              checked: $parents[1].select_prefs"&gt;
-            &lt;span data-bind="text: pref.name"&gt;&lt;/span&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/dd&gt;
-    &lt;/dl&gt;
-  &lt;% end %&gt;
-&lt;/template&gt;
+          click: $parent.toggleRegion"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">data-bind=</span><span class="s">"text: region.name"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/dt&gt;</span>
+      <span class="nt">&lt;dd&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"inline"</span> <span class="na">data-bind=</span><span class="s">"foreach: { data: region.prefs, as: 'pref' }"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"prefs[]"</span> <span class="na">data-bind=</span><span class="s">"value: pref.name,
+              checked: $parents[1].select_prefs"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">data-bind=</span><span class="s">"text: pref.name"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;/dl&gt;</span>
+  <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -645,18 +645,18 @@ def content
 9
 10
 11
-12</pre></td><td class="code"><pre>class SearchPrefs
-  constructor: (@regions, @selected_prefs) -&gt;
-    @selected_regions = []
-    ko.track(this, ['selected_regions', 'selected_prefs'])
+12</pre></td><td class="code"><pre><span class="k">class</span> <span class="nx">SearchPrefs</span>
+  <span class="na">constructor</span><span class="o">:</span> <span class="p">(</span><span class="vi">@</span><span class="na">regions</span><span class="p">,</span> <span class="vi">@</span><span class="na">selected_prefs</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="vi">@</span><span class="na">selected_regions</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="nx">ko</span><span class="p">.</span><span class="na">track</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="p">[</span><span class="s">'selected_regions'</span><span class="p">,</span> <span class="s">'selected_prefs'</span><span class="p">])</span>
 
-  toggleRegion: (region) =&gt;
-    pref_names = _.pluck(region.prefs, 'name')
-    @selected_prefs = if _.includes(@selected_regions, region.name)
-      _.union(@selected_prefs, pref_names)
-    else
-      _.difference(@selected_prefs, pref_names)
-    true
+  <span class="na">toggleRegion</span><span class="o">:</span> <span class="p">(</span><span class="nx">region</span><span class="p">)</span> <span class="o">=&gt;</span>
+    <span class="nx">pref_names</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="na">pluck</span><span class="p">(</span><span class="nx">region</span><span class="p">.</span><span class="na">prefs</span><span class="p">,</span> <span class="s">'name'</span><span class="p">)</span>
+    <span class="vi">@</span><span class="na">selected_prefs</span> <span class="o">=</span> <span class="k">if</span> <span class="nx">_</span><span class="p">.</span><span class="na">includes</span><span class="p">(</span><span class="vi">@</span><span class="na">selected_regions</span><span class="p">,</span> <span class="nx">region</span><span class="p">.</span><span class="na">name</span><span class="p">)</span>
+      <span class="nx">_</span><span class="p">.</span><span class="na">union</span><span class="p">(</span><span class="vi">@</span><span class="na">selected_prefs</span><span class="p">,</span> <span class="nx">pref_names</span><span class="p">)</span>
+    <span class="k">else</span>
+      <span class="nx">_</span><span class="p">.</span><span class="na">difference</span><span class="p">(</span><span class="vi">@</span><span class="na">selected_prefs</span><span class="p">,</span> <span class="nx">pref_names</span><span class="p">)</span>
+    <span class="no">true</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
