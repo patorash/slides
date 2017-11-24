@@ -479,7 +479,7 @@ gon経由は、gonの存在チェックが面倒😫
     <span class="k">new</span> <span class="nx">AppViewModel</span><span class="p">(</span><span class="nx">gon</span><span class="p">.</span><span class="na">title</span><span class="p">)</span>
   <span class="k">else</span>
     <span class="k">new</span> <span class="nx">AppViewModel</span><span class="p">()</span>
-  <span class="nx">ko</span><span class="p">.</span><span class="na">appryBindings</span><span class="p">(</span><span class="nx">app_view</span><span class="p">)</span>
+  <span class="nx">ko</span><span class="p">.</span><span class="na">applyBindings</span><span class="p">(</span><span class="nx">app_view</span><span class="p">)</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })
@@ -504,7 +504,7 @@ def content
   <span class="c1"># div.target data-title="タイトル" からデータ取得</span>
   <span class="nx">title</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s">'.target'</span><span class="p">).</span><span class="na">data</span><span class="p">(</span><span class="s">'title'</span><span class="p">)</span>
   <span class="nx">app_view</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AppViewModel</span><span class="p">(</span><span class="nx">title</span><span class="p">)</span>
-  <span class="nx">ko</span><span class="p">.</span><span class="na">appryBindings</span><span class="p">(</span><span class="nx">app_view</span><span class="p">)</span>
+  <span class="nx">ko</span><span class="p">.</span><span class="na">applyBindings</span><span class="p">(</span><span class="nx">app_view</span><span class="p">)</span>
 </pre></td></tr></tbody></table>
 </div>
 } } })

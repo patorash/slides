@@ -236,7 +236,7 @@ $ ->
     new AppViewModel(gon.title)
   else
     new AppViewModel()
-  ko.appryBindings(app_view)
+  ko.applyBindings(app_view)
 ```
 
 ## コンポーネントに引数を渡す
@@ -249,7 +249,7 @@ $ ->
   # div.target data-title="タイトル" からデータ取得
   title = $('.target').data('title')
   app_view = new AppViewModel(title)
-  ko.appryBindings(app_view)
+  ko.applyBindings(app_view)
 ```
 
 ## コンポーネントに引数を渡す
