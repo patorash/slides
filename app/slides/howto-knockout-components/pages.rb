@@ -364,9 +364,9 @@ def content
 5
 6</pre></td><td class="code"><pre><span class="k">class</span> <span class="vi">@</span><span class="na">BaseModal</span>
   <span class="na">constructor</span><span class="o">:</span> <span class="o">-&gt;</span>
-    <span class="vi">@</span><span class="na">vislble</span> <span class="o">=</span> <span class="no">false</span>
+    <span class="vi">@</span><span class="na">visible</span> <span class="o">=</span> <span class="no">false</span>
     <span class="nx">ko</span><span class="p">.</span><span class="na">track</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
-  <span class="na">show</span><span class="o">:</span> <span class="o">-&gt;</span> <span class="vi">@</span><span class="na">vislble</span> <span class="o">=</span> <span class="no">true</span>
+  <span class="na">show</span><span class="o">:</span> <span class="o">-&gt;</span> <span class="vi">@</span><span class="na">visible</span> <span class="o">=</span> <span class="no">true</span>
   <span class="na">hide</span><span class="o">:</span> <span class="o">-&gt;</span> <span class="vi">@</span><span class="na">visible</span> <span class="o">=</span> <span class="no">false</span>
 </pre></td></tr></tbody></table>
 </div>

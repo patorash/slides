@@ -179,9 +179,9 @@ base-articleテンプレートを定義する。
 ```coffee
 class @BaseModal
   constructor: ->
-    @vislble = false
+    @visible = false
     ko.track(this)
-  show: -> @vislble = true
+  show: -> @visible = true
   hide: -> @visible = false
 ```
 
